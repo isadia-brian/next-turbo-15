@@ -5,13 +5,45 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const poppins = localFont({
-  src: "./public/fonts/poppins/Poppins-Regular.woff2",
+  src: [
+    {
+      path: "../public/fonts/poppins/Poppins-Thin.woff2",
+      weight: "100",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-ExtraLight.woff2",
+      weight: "200",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-Light.woff2",
+      weight: "300",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-Medium.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-SemiBold.woff2",
+      weight: "600",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-Bold.woff2",
+      weight: "700",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-ExtraBold.woff2",
+      weight: "800",
+    },
+    {
+      path: "../public/fonts/poppins/Poppins-Black.woff2",
+      weight: "900",
+    },
+  ],
   variable: "--font-poppins",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${poppins.variable} ${geistMono.variable}`}>
+      <body className={`${poppins.variable}`}>
         {children}
         {/* <SpeedInsights />
         <Analytics /> */}

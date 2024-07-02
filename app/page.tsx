@@ -20,7 +20,7 @@ export default async function Home() {
   const pageData = await getPageData(query);
 
   return (
-    <div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
+    <div className='font-serif grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
       <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
         <Suspense fallback={<p>Loading...</p>}>
           <div className='flex flex-col items-center space-y-7'>
@@ -35,7 +35,7 @@ export default async function Home() {
                 priority
               />
             </div>
-            <p className='text-xl lg:text-4xl font-bold text-center '>{pageData.title}</p>
+            <p className='text-xl lg:text-4xl font-black text-center '>{pageData.title}</p>
           </div>
         </Suspense>
 
